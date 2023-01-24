@@ -17,6 +17,7 @@ let carRent = 0;
 let petrolPrice = 0;
 let petrolPricePerLitter = 2.40;
 let mileage = 0;
+let totalPrice= 0;
 
 motorBike.addEventListener('click', function() {
     motorBike.classList.add('bgbtn')
@@ -89,13 +90,15 @@ $(document).ready(function() {
         } else if (pickup.value == 'akl' && dropOff.value == 'npr' || pickup.value == 'npr' && dropOff.value == 'akl') {
             petrolPrice = (((mileage * 409) / 100) * petrolPricePerLitter)
         } else {
-            alert('Use different pick-up and drop-off value')
-            return false;
+            // alert('Use different pick-up and drop-off value')
+            // return false;
+            totalPrice= 0
         }
         petrolPrice = parseFloat(petrolPrice)
-        const totalPrice = (carRent * days.value) + (petrolPrice * days.value)
-        if (totalPrice == 0) {
-            return false
+        totalPrice = (carRent * days.value) + (petrolPrice * days.value)
+        if (pickup.value==dropOff.value) {
+            // return false
+            totalPrice= 0
         }
         estimateShow.innerText = `Total Estimated Price: $${totalPrice.toFixed(2)}`
 
