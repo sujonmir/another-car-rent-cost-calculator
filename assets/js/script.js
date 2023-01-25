@@ -7,6 +7,7 @@ let motorHome = document.getElementById('motorHome');
 let pickUp = document.getElementById('pickup');
 let dropOff = document.getElementById('dropoff');
 let estimateShow = document.getElementById('estimateShow');
+let subCarRent = document.getElementById('subCarRent');
 let p1 = document.getElementById('p1');
 let p2 = document.getElementById('p2');
 let p3 = document.getElementById('p3');
@@ -76,6 +77,7 @@ setInterval(function() {
         largeCar.disabled = false;
         motorHome.disabled = true;
     }
+    subCarRent.innerText= carRent*days.value
 
 
 }, 1);

@@ -13,7 +13,7 @@
     --yellow: #ecfd06;
     --tomato: #fd4400;
     --dark: #000;
-    /*--brandColor: #ebebeb;*/
+    --brandColor: #ebebeb;
 }
 
 * {
@@ -208,6 +208,31 @@ header {
     transition: all linear .3s;
 }
 
+/*sub result start*/
+.subResult{
+    display: flex;
+    justify-content: center;
+    color: var(--bg);
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin:0 100px 70px 100px;
+    padding: 20px 50px;
+    /*border: 2px solid #ddd;*/
+    box-shadow: 0 0 20px 0 #000;
+    border-radius: 25px;
+    text-shadow: 0 0 3px #222;
+}
+#subCarRent{
+    color: #131722;
+    font-family: arial;
+    margin-left: 30px;
+}
+#subCarRent:before{
+    content: '$';
+}
+/*sub result end*/
+
 .estimate {
     margin: 50px 0;
     font-size: 18px;
@@ -333,6 +358,10 @@ header {
 
     .estimateShow {
         font-size: 32px;
+    }
+    .subResult{
+        margin: 0 20px 50px 20px !important;
+        font-size: 24px;
     }
 }
 
